@@ -1,13 +1,7 @@
 package org.example;
 
-import org.example.logica.Empleado;
 import org.example.logica.Menu;
 import org.example.persistencia.ControladoraPersistencia;
-
-import java.util.Date;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {

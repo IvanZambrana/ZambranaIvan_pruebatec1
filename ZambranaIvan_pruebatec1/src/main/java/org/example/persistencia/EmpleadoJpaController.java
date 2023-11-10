@@ -25,13 +25,6 @@ public class EmpleadoJpaController {
 
     //Metodos para interactuar con la BD
     //Crear
-   /* public void create(Empleado empleado){
-        EntityManager em = null;
-        em = getEntityManager();
-        em.getTransaction().begin();
-        em.persist(empleado);
-        em.getTransaction().commit();
-    }*/
     public void create(Empleado empleado) {
         EntityManager em = null;
         try {
@@ -51,14 +44,6 @@ public class EmpleadoJpaController {
 
 
     //Eliminar
-    /*public void destroy (Long id){
-        EntityManager em = null;
-        em = getEntityManager();
-        em.getTransaction().begin();
-        Empleado empleado= em.find(Empleado.class, id);
-        em.remove(empleado);
-        em.getTransaction().commit();
-    }*/
     public void destroy(Long id) {
         EntityManager em = null;
         try {
@@ -79,13 +64,6 @@ public class EmpleadoJpaController {
         }
     }
     //Editar
-    /*public void edit(Empleado empleado){
-        EntityManager em = null;
-        em = getEntityManager();
-        em.getTransaction().begin();
-        em.merge(empleado);
-        em.getTransaction().commit();
-    }*/
     public void edit(Empleado empleado) {
         EntityManager em = null;
         try {
@@ -104,15 +82,6 @@ public class EmpleadoJpaController {
     }
 
     //Listar
-    /*public List<Empleado> findEmpleadoEntities(){
-        EntityManager em = null;
-        em = getEntityManager();
-
-        CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-        cq.select(cq.from(Empleado.class));
-        Query q = em.createQuery(cq);
-        return q.getResultList();
-    }*/
     public List<Empleado> findEmpleadoEntities() {
         EntityManager em = null;
         try {
@@ -147,6 +116,7 @@ public class EmpleadoJpaController {
         }
     }
 
+    //Buscar por cargo
     public List<Empleado> searchByCharge(String cargo) {
         EntityManager em = getEntityManager();
         try {
